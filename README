@@ -1,0 +1,63 @@
+TITRE : Jeu de course 2D
+
+Compilation : makefile -> make
+
+Utilisation du programe : 
+Aprés compilation, executer "./initial2d".
+Une fois le jeu lancé, créé un circuit grace a l'éditeur.
+
+Pour en créé un circuit, placez les points composant le circuit, puis 
+une fois fini, cliquer sur save et entrez un nom. Le menu de gauche
+comporte des options de selection pour modifier le circuit actuel.
+Il est également possible de chargé un niveau déja existant pour le modifier.
+
+Note : Des options sont disponibles dans le menu OPTION tel 
+qu'un mode un effet et des règle de jeu supplémentaires.
+
+Pour faire une partie, selectionner SOLO, MULTI ou LAN CHRONO puis selectionner
+le circuit.
+
+Le mode SOLO permet de jouer un circuit avec un seul joueur.
+Le mode MULTI permet de jouer un circuit de 2 a 4 joueur en local.
+Le mode LAN permet de jouer un circuit de 2 a 4 joueur en temps réel sur plusieurs machines. (Non fonctionnel!)
+Le mode LAN CHRONO permet de jouer un circuit en versus sur deux machines.
+
+Dans les options :
+Drift : Correspond une mode conduite donnant de l'inertie aux véhicule.
+Debug : Affiche les boites de colision et les angles.
+Colision : Active la colision entre véhicule.
+Trail : Ajoute un effet a tout les véhicule.
+
+Les touches par défaut pour chaque voiture:
+Joueur 1 : Fleches
+Joueur 2 : ZQSD
+Joueur 3 : IJKL
+Joueur 4 : 8456
+
+Partie du programe réalisé : 
+-Editeur de niveau
+-Sauvegarde de niveau persistant
+-Colision entre voiture et mur
+-Mode de jeu solo et multi(local)
+-Compte a rebourd de départ
+-Classement des joueurs par course + temps
+-Ajout d'un mode "drift"
+-Splash screen
+-Mode Versus en réseau
+-Prototype Mode réseau en temps réel
+
+Partie intéressante du code :
+-Gestion des circuit. Ils sont sauvergardé dans des dossier qui porte leur
+nom. A l'intérieur du dossier se trouve un fichier comprenant les points du
+circuit.
+
+-Le "drift". C'est un mode de conduite alternatif qui simule un dérapage
+constant de tout les véhicule.
+
+-Le mode LAN CHRONO. Fonctionne en réseau, chaque joueur fini le niveau
+selectionné par le serveur et on détermine lequel des deux a fini en premier.
+
+-Le mode LAN. L'idée était de faire un mode semblable au MULTI mais ou chaque
+joueur est sur une machine différente. Il n'est pas fini, lorsqu'il marche 
+correctement il permet pour le moment de seulement diffuser l'écran du serveur
+a tous les joueurs.
